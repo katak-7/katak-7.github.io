@@ -113,7 +113,39 @@
                     </div>
                 </article>
 
-                <!-- Project 2: Death's Refrain -->
+                <!-- Project 2: Jira Discord Bot (WIP) -->
+                <article class="grid grid-cols-1 md:grid-cols-12 gap-6 bg-zinc-900/40 p-6 rounded-xl border border-zinc-800/80">
+                    <div class="md:col-span-5 aspect-video bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800 relative group cursor-pointer" onclick="openModal('project-jira-bot')">
+                        <img src="assets/WIP-icon.jpg" alt="JiraChamp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="md:col-span-7 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2 text-[11px] font-mono text-zinc-400">
+                                <span>Production Tooling</span>
+                                <span>•</span>
+                                <span>Workflow Automation</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">JiraChamp <span class="text-xs font-mono text-amber-400 font-normal">[WIP]</span></h3>
+                            <p class="text-xs text-zinc-400 leading-relaxed">
+                                Internal Python automation tool connecting Discord directly to Jira to streamline backlog grooming and sprint task tracking for a game development team.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
+                            <li>Prototyped a Python Discord bot to automate Jira issue creation and backlog updates.</li>
+                            <li>Reduced context switching between team chat channels and Jira sprint boards.</li>
+                            <li>Built to support active sprint management and hardware/manpower tracking on a Unity team project.</li>
+                        </ul>
+                        <!-- Tech Skill Tags -->
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="px-2 py-0.5 text-[10px] font-mono bg-zinc-800 text-zinc-300 border border-zinc-700/60 rounded">Unity</span>
+                            <span class="px-2 py-0.5 text-[10px] font-mono bg-zinc-800 text-zinc-300 border border-zinc-700/60 rounded">C#</span>
+                            <span class="px-2 py-0.5 text-[10px] font-mono bg-zinc-800 text-zinc-300 border border-zinc-700/60 rounded">Python</span>
+                            <span class="px-2 py-0.5 text-[10px] font-mono bg-zinc-800 text-zinc-300 border border-zinc-700/60 rounded">Jira</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Death's Refrain -->
                 <article class="grid grid-cols-1 md:grid-cols-12 gap-6 bg-zinc-900/40 p-6 rounded-xl border border-zinc-800/80">
                     <div class="md:col-span-5 aspect-video bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800 relative group cursor-pointer" onclick="openModal('project-deaths-refrain')">
                         <img src="assets/Main_Menu_C2.png" alt="Death's Refrain" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -150,7 +182,7 @@
                     </div>
                 </article>
 
-                <!-- Project 3: Isometric RPG -->
+                <!-- Project 4: Isometric RPG -->
                 <article class="grid grid-cols-1 md:grid-cols-12 gap-6 bg-zinc-900/40 p-6 rounded-xl border border-zinc-800/80">
                     <div class="md:col-span-5 aspect-video bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800 relative group cursor-pointer" onclick="openModal('project-isometric-rpg')">
                         <img src="assets/hyperlink.png" alt="2D Isometric RPG" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -179,6 +211,8 @@
                         </div>
                     </div>
                 </article>
+
+                
 
             </div>
         </section>
@@ -295,12 +329,14 @@
                 title.textContent = "Prata VR Simulator (WIP) - Unity & JIRA Project Management";
                 
                 body.innerHTML = `
-                    <strong class="text-white block mb-1">Key Contributions & Technical Scope:</strong>
-                    <ul class="list-disc list-inside space-y-1 text-zinc-300">
-                        <li><strong>JIRA Project Management:</strong> Administered team sprints, backlog prioritization, user stories, and milestone roadmaps for the project.</li>
-                        <li><strong>Unity VR Capabilities:</strong> Scripted VR hand interactions, physics-based cooking mechanics, and dynamic feedback systems in C#.</li>
-                        <li><strong>Iterative Prototyping:</strong> Conducted VR playtests to refine motion metrics and interaction ergonomics for dough flipping and griddle mechanics.</li>
-                    </ul>
+                <div class="space-y-2 text-zinc-300">
+                    <p><strong class="text-white">Problem:</strong> Needed tactile, physics-driven cooking mechanics and responsive Artificial Intelligence (AI) agent behavior in Virtual Reality (VR) while keeping a shifting team aligned on deliverables.</p>
+                    <p><strong class="text-white">Constraint:</strong> Shrinking team manpower, limited VR testing hardware access, and tight academic sprint windows.</p>
+                    <p><strong class="text-white">What I Tested:</strong> Scripted VR hand interactions, dough-flipping/griddle physics in Unity C#, whitebox level layouts, and structured JIRA sprint backlogs.</p>
+                    <p><strong class="text-white">What Failed:</strong> AI Agent companion responded too slowly due to wisper utterance cutoff limitation</p>
+                    <p><strong class="text-white">What I Changed:</strong> Added manual push-to-talk button to sidestep utterance issue which also allowed players to control when the Agent can/cannot listen. </p>
+                    <p><strong class="text-white">What Happened:</strong> Secured critical testing hardware with faculty support, accelerated environment art via whiteboxing, and maintained steady sprint velocity.</p>
+                </div>
                 `;
             }
             else if (id === 'project-deaths-refrain') {
@@ -314,27 +350,48 @@
                         Your browser does not support the video tag.
                     </video>
                 `;
-                
+
                 body.innerHTML = `
-                    <strong class="text-white block mb-1">Key Contributions:</strong>
-                    <ul class="list-disc list-inside space-y-1 text-zinc-300">
-                        <li><strong>Engine Architecture:</strong> Co-architected core C++ engine with Tech Lead; engineered Scene Manager & Entity Management System.</li>
-                        <li><strong>Narrative & Visual Style:</strong> Wrote game lore and collaborated with artists on concept art and tone prototyping.</li>
-                        <li><strong>Project Management:</strong> Kept team momentum and milestone schedules clear across shifting scopes.</li>
-                    </ul>
+                <div class="space-y-2 text-zinc-300">
+                    <p><strong class="text-white">Problem:</strong> Needed a custom 2D tactical engine and level-editing pipeline capable of supporting turn-based encounters and rapid content iteration without a commercial engine.</p>
+                    <p><strong class="text-white">Constraint:</strong> Built from scratch in C++ and Lua under strict academic milestone deadlines and shifting feature scope.</p>
+                    <p><strong class="text-white">What I Tested:</strong> Co-architected an Object-Oriented Programming (OOP) engine core with dedicated Scene and Entity Managers alongside an integrated level editor.</p>
+                    <p><strong class="text-white">What Failed:</strong> Team had a lot of trouble integrating new components since serialization/deserialization library only handled primive types</p>
+                    <p><strong class="text-white">What I Changed:</strong> Created custom serialization/deserialization handling for internal types and clearer communication with component owners. </p>
+                    <p><strong class="text-white">What Happened:</strong> Shipped a scalable C++/Lua engine and functional level editor that kept team milestones on track across the core production cycle.</p>
+                </div>
                 `;
+                
             }
             else if (id === 'project-isometric-rpg') {
                 title.textContent = "2D Isometric RPG - DigiPen Alpha Engine";
 
                 body.innerHTML = `
-                    <strong class="text-white block mb-1">Key Contributions:</strong>
-                    <ul class="list-disc list-inside space-y-1 text-zinc-300">
-                        <li><strong>Particle & Entity Systems:</strong> Built optimized custom particle emitters and entity logic inside DigiPen's C++ Alpha Engine framework.</li>
-                        <li><strong>Level Design:</strong> Designed all 2D isometric layouts, enemy spawn triggers, and encounter pacing.</li>
-                    </ul>
+                <div class="space-y-2 text-zinc-300">
+                    <p><strong class="text-white">Problem:</strong> Needed performant particle effects, responsive entity handling, and paced combat encounters for an isometric action Role-Playing Game (RPG).</p>
+                    <p><strong class="text-white">Constraint:</strong> Developed in a 2-person team inside DigiPen’s C++ Alpha Engine graphics framework under strict runtime memory and performance limits.</p>
+                    <p><strong class="text-white">What I Tested:</strong> Co-developed a custom particle emitter system, optimized entity update loops, and built all isometric levels and enemy spawn triggers.</p>
+                    <p><strong class="text-white">What Failed:</strong> Performance drops due to huge amount of paritcles present during average gameplay loop. </p>
+                    <p><strong class="text-white">What I Changed:</strong> Implemented deffered deletion to avoid rapid dynamic memory allocation at runtime. </p>
+                    <p><strong class="text-white">What Happened:</strong> Delivered a fully playable isometric RPG with smooth runtime rendering and structured encounter maps.</p>
+                </div>
                 `;
             }
+
+            else if (id === 'project-jira-bot') {
+            title.textContent = "Discord-to-Jira Workflow Bot — Python Production Tool";
+
+            body.innerHTML = `
+                <div class="space-y-2 text-zinc-300">
+                    <p><strong class="text-white">Problem:</strong> Manual Jira backlog grooming and ticket updates created production friction for a small development team coordinating sprint tasks.</p>
+                    <p><strong class="text-white">Constraint:</strong> Needed a lightweight interface inside Discord—where the team already communicated daily—without adding administrative overhead.</p>
+                    <p><strong class="text-white">What I Tested:</strong> Prototyped a Python bot connecting Discord commands to Jira workflows to automate backlog management and task tracking.</p>
+                    <p><strong class="text-white">What Failed:</strong> Allowing users to only see their work would have required them to provide API keys for the bot to handle updates on their behalf. Highly coupled and diffucult to configure</p>
+                    <p><strong class="text-white">What I Changed:</strong> Bot insteads owns its own account within Jira Space with admin priveledges and maps discord & Jira usernames to handle personalalized updates on their behalf</p>
+                    <p><strong class="text-white">What Happened:</strong> Streamlined sprint backlog management and reduced manual ticket-tracking overhead during active production.</p>
+                </div>
+            `;
+        }
 
             modal.classList.remove('hidden');
             modal.classList.add('flex');
